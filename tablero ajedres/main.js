@@ -1,23 +1,16 @@
-function chess(tamaño){
-  let Par = "";
-  let Impar = "";
-  while(Par.length < tamaño){
-    if(Par.length % 2 == 0){
-      Par += "#";
-      Impar += " ";
-    } 
-     if(Par.length % 2 == 1){
-      Par += " ";
-      Impar += "#";
-    } 
-  }
-  for(let i = 0; i<tamaño; i++){
-    if(i % 2 === 0){ 
-        console.log(Par + "\n");
+let yu = 8;
+let xu = ""
+
+for (let y = 0; y < yu; y++) {
+    for (let x = 0; x < yu; x++) {
+        if ((x+y) % 2 === 0) {
+            xu += " "
+        }
+        else{
+            xu += "#"
+        }
     }
-    if(i % 2 === 1){ 
-        console.log(Impar + "\n");
-    }
-  }
+    xu += "\n"
 }
-chess(8);
+
+console.log(xu);
